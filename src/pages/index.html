@@ -1,0 +1,61 @@
+---
+layout: kayak
+subject: Great Deals today
+
+---
+<container>
+    <row class="deal-of-day">
+        <columns>
+            <h2>
+                Deal of the Day</h2>
+            <img src="{{kayakEmail.dealOfTheDay.image}}" alt="" srcset="">
+            <p>{{kayakEmail.dealOfTheDay.location}}: {{kayakEmail.dealOfTheDay.description}}</p>
+            <span class="save-amount">{{kayakEmail.dealOfTheDay.saveAmount}}</span>
+            <span class="tiny-info">{{kayakEmail.dealOfTheDay.tinyInfo}}</span>
+            <span class="price">${{kayakEmail.dealOfTheDay.price}}+</span>
+            <center>
+                <a class="button" href="{{kayakEmail.dealOfTheDay.link}}">See Deal</a>
+            </center>
+        </columns>
+    </row>
+</container>
+<container>
+    <row class="content-area">
+        <columns class="first-offer">
+            {{#each kayakEmail.offers}}
+                <row class="offer">
+                    <columns large="" small="" valign="">
+                        <img src="{{this.image}}" alt="{{this.image}}" srcset="">
+                        <p>{{this.location}}: {{this.description}}</p>
+                        <span class="save-amount">{{this.saveAmount}}</span>
+                        <span class="tiny-info">{{this.tinyInfo}}</span>
+                        <span class="price">${{this.price}}+</span>
+                        <a class="button" href="{{this.link}}">See Deal</a>
+                    </columns>
+                </row>
+            {{/each}}
+        </columns>
+    </row>
+</container>
+<container>
+    <row class="content-area">
+        <columns>
+            <row class="offer last-offer">
+                <columns large="" small="" valign="">
+                    <row>
+                        <columns>
+                            <img
+                                alt=""
+                                class="group-icons"
+                                src="https://i.imgur.com/1ePUkq5.png"
+                                srcset="">
+                        </columns>
+                    </row>
+                    <h4>Still looking? There's more</h4>
+                    <p>Search hundreds of deals to suit your budget on flights, packages, cruses and more.</p>
+                    <a class="button" href="#">See Deal</a>
+                </columns>
+            </row>
+        </columns>
+    </row>
+</container>
